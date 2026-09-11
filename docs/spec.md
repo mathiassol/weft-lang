@@ -244,10 +244,12 @@ The claim is not "it works everywhere." The claim is a **published support-tier 
 | `x86_64-linux-gnu` | `ubuntu-24.04` | build, `lit` suite, stdlib tests, demos, install-script test |
 | `aarch64-linux-gnu` | `ubuntu-24.04-arm` | same |
 | `aarch64-macos` | `macos-14` | same |
-| `x86_64-macos` | `macos-13` | same |
+| `x86_64-macos` | `macos-13` (see note) | same |
 | `x86_64-windows-msvc` | `windows-2022` | same |
 
 All five are GitHub-hosted runners available to public repositories, so there is no self-hosted hardware dependency. `aarch64-windows-msvc` on `windows-11-arm` is a Tier-1 *stretch*; until it is green it is listed as Tier 2.
+
+**Note on runner labels.** GitHub retires macOS images on a rolling basis, and the Intel macOS label in particular has moved (`macos-13` → `macos-15-intel`). Confirm the current Intel-macOS label at Phase 0 rather than trusting this table, and prefer the newest non-deprecated label. If GitHub ever drops hosted Intel macOS entirely, `x86_64-macos` moves to Tier 2 with a note — it does not get quietly claimed. The *targets* are the commitment; the runner labels are an implementation detail that CI owns.
 
 ### Tier 2 — builds, not continuously tested
 
