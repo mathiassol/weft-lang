@@ -69,14 +69,14 @@ The reasoning for each is in [the spec](docs/spec.md). An NVPTX backend, ARM SVE
 
 ## Planned platform support
 
-Tier 1 means tested in CI on every commit to `main`. None of these are green yet — this is the target, and the table will not claim a target that lacks a CI job.
+Tier 1 means tested in CI on every commit to `main`. None of these are green yet — this is the target, and the table will not claim a target that lacks a CI job. The five *targets* are the commitment; runner labels get confirmed at Phase 0, since GitHub retires images on a rolling basis.
 
 | Target | Runner | State |
 | --- | --- | --- |
 | `x86_64-linux-gnu` | `ubuntu-24.04` | planned |
 | `aarch64-linux-gnu` | `ubuntu-24.04-arm` | planned |
 | `aarch64-macos` | `macos-14` | planned |
-| `x86_64-macos` | `macos-13` | planned |
+| `x86_64-macos` | Intel macOS, label TBC | planned |
 | `x86_64-windows-msvc` | `windows-2022` | planned |
 
 ## Implementation stack
